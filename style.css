@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+* {
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #222222; 
+}
+
+.center {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.brightness-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background: black;
+  opacity: 0.2;
+}
+
+#fluent-logo {
+  fill: none;
+  stroke: white;
+  stroke-width: 1px;
+  stroke-dasharray: 261.40972900390625px;
+  stroke-dashoffset: 261.40972900390625px;
+  animation: stroke 3s ease-in-out; 
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+.header {
+  background: url(https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section {
+  height: 100vh;
+}
+
+svg {
+  width: 50vw;
+  max-width: 300px;
+}
+
+h1 {
+  opacity: 0;
+  animation: zoomin 3s ease-in-out;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  color: white;
+  font-family: 'Krona One', sans-serif;
+}
+
+@keyframes stroke {
+
+80% {
+    fill: rgba(255,255,255,0);
+  }
+    100% {
+      fill: rgba(255,255,255,1);
+      stroke-dashoffset: 0;
+    }
+}
+
+@keyframes zoomin {
+  0% {
+    opacity: 0;
+    letter-spacing: -4em;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: 0.5em;
+  }
+}
